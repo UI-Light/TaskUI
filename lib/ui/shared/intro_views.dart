@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:ui_practice/ui/views/signup_view.dart';
 
 class IntroViews extends StatelessWidget {
   final String text;
@@ -40,7 +39,7 @@ class IntroViews extends StatelessWidget {
                         fontSize: 35,
                         fontWeight: FontWeight.w600),
                   ),
-                  const SizedBox(height: 30),
+                  const SizedBox(height: 50),
                   Container(
                     height: 40,
                     width: 260,
@@ -53,34 +52,28 @@ class IntroViews extends StatelessWidget {
                         Radius.circular(25),
                       ),
                     ),
-                    child: Row(
+                    child: const Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        const Icon(
+                        Icon(
                           Icons.email_sharp,
                           size: 20,
                           color: Colors.white,
                         ),
-                        const SizedBox(
+                        SizedBox(
                           width: 8,
                         ),
-                        GestureDetector(
-                          onTap: () {
-                            Navigator.of(context).push(MaterialPageRoute(
-                                builder: ((context) => const SignupView())));
-                          },
-                          child: const Text(
-                            'Continue with Email',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 12,
-                                fontWeight: FontWeight.w600),
-                          ),
+                        Text(
+                          'Continue with Email',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 12,
+                              fontWeight: FontWeight.w600),
                         ),
                       ],
                     ),
                   ),
-                  const SizedBox(height: 10),
+                  const SizedBox(height: 30),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
